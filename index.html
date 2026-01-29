@@ -1,32 +1,68 @@
-<!DOCTYPE html>
+
+  <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Passion Project</title>
+  <title>Global Advocacy Hub</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <header>
-    <h1>Welcome to My Website</h1>
-    <p>Showing what I care about in the world</p>
+    <h1>🌏 Global Advocacy Hub 🌈</h1>
+    <p>A safe, colorful space for activism, mental health, and community worldwide!</p>
+    <label for="colorPicker">Choose your theme:</label>
+    <select id="colorPicker">
+      <option value="default">Default</option>
+      <option value="pastel">Pastel</option>
+      <option value="hotpink">Hot Pink</option>
+      <option value="babyblue">Baby Blue</option>
+      <option value="yellow">Pastel Yellow</option>
+    </select>
   </header>
 
   <section>
-    <h2>About My Project</h2>
-    <p>This project is focused on <em>mental health awareness</em> (or pick your topic).</p>
+    <h2>🌸 Rights & Activism</h2>
+    <p>Learn about feminism, political rights, ICE awareness, and safe activism globally.</p>
+    <button onclick="showPopup('us')">USA 🇺🇸</button>
+    <button onclick="showPopup('india')">India 🐅</button>
+    <button onclick="showPopup('china')">China 🐼</button>
+    <button onclick="showPopup('australia')">Australia 🦘</button>
   </section>
 
   <section>
-    <h2>Resources</h2>
+    <h2>💖 Mental Health</h2>
+    <p>Tips and resources for adults, teens, and children — male & female.</p>
     <ul>
-      <li><a href="#">Link 1</a></li>
-      <li><a href="#">Link 2</a></li>
+      <li>Adults: Coping techniques, helplines</li>
+      <li>Teens: School & social support tips</li>
+      <li>Children: Guidance for parents/caregivers</li>
     </ul>
   </section>
 
-  <button onclick="sayHello()">Click Me!</button>
+  <section>
+    <h2>💬 Community Board</h2>
+    <p>Click posts to view details! (Static demo for now)</p>
+    <div class="post">
+      <h3>Women’s Rights</h3>
+      <p>How to organize a safe protest in your city.</p>
+    </div>
+    <div class="post">
+      <h3>Mental Health</h3>
+      <p>Tips for teens feeling overwhelmed at school.</p>
+    </div>
+    <div class="post">
+      <h3>Political Rights</h3>
+      <p>Know your rights as a protester in your country.</p>
+    </div>
+  </section>
+
+  <div id="popup" class="popup">
+    <span id="popupText"></span>
+    <button onclick="closePopup()">Close</button>
+  </div>
 
 </body>
 </html>
+
