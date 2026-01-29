@@ -1,4 +1,4 @@
-// Chat functionality
+// ====== Chat functionality ======
 const chatInput = document.getElementById('chatInput');
 const sendBtn = document.getElementById('sendBtn');
 const chatLog = document.getElementById('chatLog');
@@ -14,17 +14,19 @@ sendBtn.addEventListener('click', () => {
     }
 });
 
-// Mini-story buttons
+// ====== Mini-stories ======
 const storyBtns = document.querySelectorAll('.storyBtn');
 const storyOutput = document.getElementById('storyOutput');
 
 storyBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-        storyOutput.textContent = btn.dataset.story;
+        const storyDiv = document.createElement('div');
+        storyDiv.textContent = btn.dataset.story;
+        storyOutput.appendChild(storyDiv);
     });
 });
 
-// Color picker functionality
+// ====== Color picker ======
 const colorPicker = document.getElementById('colorPicker');
 document.body.style.backgroundColor = colorPicker.value;
 
@@ -32,7 +34,7 @@ colorPicker.addEventListener('input', (e) => {
     document.body.style.backgroundColor = e.target.value;
 });
 
-// Floating sparkles effect
+// ====== Floating sparkles ======
 function createSparkle() {
     const sparkle = document.createElement('div');
     sparkle.classList.add('sparkle');
@@ -47,23 +49,13 @@ function createSparkle() {
 
 setInterval(createSparkle, 300);
 
-// Sparkle CSS (added dynamically)
-const sparkleStyle = document.createElement('style');
-sparkleStyle.innerHTML = `
-.sparkle {
-    width: 5px;
-    height: 5px;
-    background: yellow;
-    position: absolute;
-    border-radius: 50%;
-    box-shadow: 0 0 8px 2px yellow;
-    pointer-events: none;
-    animation: sparkleAnim 2s linear forwards;
-}
+// ====== Interactive chibis ======
+const chibis = document.querySelectorAll('.chibi');
 
-@keyframes sparkleAnim {
-    0% { opacity: 1; transform: translateY(0) scale(1); }
-    100% { opacity: 0; transform: translateY(-50px) scale(0); }
-}
-`;
-document.head.appendChild(sparkleStyle);
+chibis.forEach(chibi => {
+    chibi.addEventListener('click', () => {
+        // Move chibi to a random spot on click
+        chibi.style.left = Math.random() * (window.innerWidth - 100) + 'px';
+        chibi.style.top = Math.random() * (window.innerHeight - 200) + 'px';
+    });
+});
