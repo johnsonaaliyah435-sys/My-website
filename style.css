@@ -1,30 +1,43 @@
-// Pop-ups for different countries
-function showPopup(country) {
-  const popup = document.getElementById('popup');
-  const text = document.getElementById('popupText');
-  switch(country) {
-    case 'us':
-      text.innerHTML = "USA 🇺🇸: Bald Eagle 🦅 — Protect your rights, know your laws!";
-      break;
-    case 'india':
-      text.innerHTML = "India 🐅: Tiger 🐅 — Stay safe during activism and protests!";
-      break;
-    case 'china':
-      text.innerHTML = "China 🐼: Panda 🐼 — Spread awareness, be kind to mental health.";
-      break;
-    case 'australia':
-      text.innerHTML = "Australia 🦘: Kangaroo 🦘 — Connect, learn, and share safely!";
-      break;
-  }
-  popup.style.display = "block";
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fefefe;
+  color: #333;
+  margin: 0;
+  padding: 0 20px;
 }
 
-function closePopup() {
-  document.getElementById('popup').style.display = "none";
+header {
+  text-align: center;
+  padding: 20px 0;
 }
 
-// Color theme picker
-const colorPicker = document.getElementById('colorPicker');
-colorPicker.addEventListener('change', (e) => {
-  document.body.className = e.target.value;
-});
+button {
+  margin: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+section {
+  margin: 20px 0;
+}
+
+.post {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  z-index: 100;
+}
