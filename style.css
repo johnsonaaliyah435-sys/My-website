@@ -1,95 +1,71 @@
-/* Default Theme */
-:root {
-  --main-bg: #fdf6f0;
-  --main-color: #333;
-  --header-color: #ff69b4;
-  --button-bg: #ff69b4;
-}
-
 body {
-  font-family: Arial, sans-serif;
-  background-color: var(--main-bg);
-  color: var(--main-color);
-  text-align: center;
-  padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #fffcf2, #ffe4e1);
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
-header h1 {
-  color: var(--header-color);
+.header {
+    background-color: #ffb6c1;
+    padding: 20px;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-button {
-  padding: 10px 20px;
-  margin: 5px;
-  background-color: var(--button-bg);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
+.chibis-container {
+    margin: 20px 0;
 }
 
-section {
-  margin: 30px 0;
+.chibi {
+    width: 80px;
+    margin: 10px;
+    transition: transform 0.3s;
 }
 
-.post {
-  background-color: #fff0f5;
-  border: 2px solid #ff69b4;
-  border-radius: 10px;
-  padding: 15px;
-  margin: 10px auto;
-  width: 80%;
-  cursor: pointer;
-  transition: transform 0.2s;
+.chibi:hover {
+    transform: scale(1.2);
 }
 
-.post:hover {
-  transform: scale(1.03);
+.color-picker-container {
+    margin: 20px 0;
 }
 
-/* Pop-up */
-.popup {
-  display: none;
-  position: fixed;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%);
-  background-color: #fff9c4;
-  border: 2px solid #ff69b4;
-  border-radius: 12px;
-  padding: 20px;
-  z-index: 1000;
+.chat-container {
+    margin: 20px auto;
+    width: 300px;
 }
 
-#popup button {
-  margin-top: 10px;
+#chatInput {
+    width: 200px;
+    padding: 5px;
 }
 
-/* Themes */
-body.pastel {
-  --main-bg: #fef6ff;
-  --main-color: #333;
-  --header-color: #f7b2e5;
-  --button-bg: #f7b2e5;
+#sendBtn {
+    padding: 5px 10px;
+    cursor: pointer;
 }
 
-body.hotpink {
-  --main-bg: #ffe6f0;
-  --main-color: #333;
-  --header-color: #ff1493;
-  --button-bg: #ff1493;
+#chatLog {
+    margin-top: 10px;
+    min-height: 50px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: #fff;
 }
 
-body.babyblue {
-  --main-bg: #e0f7ff;
-  --main-color: #333;
-  --header-color: #00bfff;
-  --button-bg: #00bfff;
+.mini-story-container {
+    margin: 20px auto;
 }
 
-body.yellow {
-  --main-bg: #fff9e6;
-  --main-color: #333;
-  --header-color: #ffdd57;
-  --button-bg: #ffdd57;
+.storyBtn {
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#storyOutput {
+    margin-top: 10px;
+    font-style: italic;
+    color: #333;
 }
