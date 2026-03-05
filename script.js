@@ -1,25 +1,47 @@
-// Basic button actions
-document.addEventListener("DOMContentLoaded", function() {
-    // Example buttons
-    const donateBtn = document.getElementById("donateBtn");
-    const signBtn = document.getElementById("signBtn");
-    const learnBtn = document.getElementById("learnBtn");
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #1e1e2f;
+  color: #fff;
+  overflow-x: hidden;
+}
 
-    if(donateBtn) {
-        donateBtn.addEventListener("click", function() {
-            alert("Thank you! You can donate to legal defense & advocacy at example.org.");
-        });
-    }
+#book-entrance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  animation: fadeIn 2s;
+}
 
-    if(signBtn) {
-        signBtn.addEventListener("click", function() {
-            alert("Sign petitions for policy change at example.org.");
-        });
-    }
+#book {
+  background: linear-gradient(to bottom right, #6a1b9a, #ab47bc);
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.5);
+  animation: sparkle 3s infinite;
+}
 
-    if(learnBtn) {
-        learnBtn.addEventListener("click", function() {
-            alert("Learn about your rights and laws at example.org.");
-        });
-    }
-});
+button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #ff69b4;
+  color: white;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes sparkle {
+  0% {box-shadow: 0 0 20px #ff69b4;}
+  50% {box-shadow: 0 0 50px #ffb6c1;}
+  100% {box-shadow: 0 0 20px #ff69b4;}
+}
