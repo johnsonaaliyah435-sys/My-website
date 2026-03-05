@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Global Advocacy Hub</title>
-    <!-- Link to your CSS -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aureliyah.Space</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Magical book entrance -->
+  <div id="book-entrance">
+    <div id="fairy">🧚‍♀️</div>
+    <div id="book">
+      <h1>Welcome to Aureliyah.Space</h1>
+      <p>Discover a magical world of learning!</p>
 
-<header>
-    <h1>Global Advocacy Hub</h1>
-    <p>We scream for the voiceless. We stand for the children. We resist injustice. Youth voices amplified.</p>
-</header>
+      <!-- Theme and age setup -->
+      <div id="setup">
+        <label>Pick a theme:</label>
+        <select id="theme-select">
+          <option value="default">Default</option>
+          <option value="space">Space</option>
+          <option value="forest">Forest</option>
+        </select>
 
-<section>
-    <h2>Reality</h2>
-    <p>Children, women, men—Native, immigrant, or anyone deemed "illegal"—are being detained, abused, and erased. ICE and other systems are committing atrocities. We will document it. We will expose it.</p>
-</section>
+        <label>Pick your age/knowledge level:</label>
+        <select id="age-select">
+          <option value="seedling">Seedling (6-10)</option>
+          <option value="sprout">Sprout (11-14)</option>
+          <option value="sapling">Sapling (15-18)</option>
+          <option value="cosmos">Cosmos (18+)</option>
+        </select>
 
-<section>
-    <h2>Voices</h2>
-    <p>Share your story anonymously → <button id="shareBtn">Submit Here</button></p>
-    <p>Document injustices in your community → <button id="reportBtn">Report Here</button></p>
-    <p>Amplify youth protests and actions → <button id="amplifyBtn">Amplify Here</button></p>
-</section>
+        <button id="enter-site">Enter Aureliyah.Space</button>
+      </div>
+    </div>
+  </div>
 
-<section>
-    <h2>Action</h2>
-    <button id="donateBtn">Donate to legal defense & advocacy</button>
-    <button id="signBtn">Sign petitions for policy change</button>
-    <button id="learnBtn">Educate yourself on laws & rights</button>
-</section>
+  <!-- Homepage -->
+  <div id="homepage" style="display:none;">
+    <h1>Aureliyah.Space</h1>
+    <p>Mission statement, stats, daily highlights, etc.</p>
+    <button id="start-exploring">Start Exploring</button>
+  </div>
 
-<footer>
-    <p>Global Advocacy Hub | Built for youth voices | Stay informed, stay loud</p>
-</footer>
-
-<!-- Link to your JavaScript -->
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
